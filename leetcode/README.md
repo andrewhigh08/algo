@@ -1,2 +1,2 @@
 # leetcode.com
-my solutions from leetcode.com
+my solutions from 'https://leetcode.com/'

@@ -1,2 +1,2 @@
 # codewars.com
-problem solving from codewars.com
+problem solving from 'https://www.codewars.com/'
