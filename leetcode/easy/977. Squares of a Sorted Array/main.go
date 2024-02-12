@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/squares-of-a-sorted-array/
 package main
 
 import (
@@ -10,11 +11,14 @@ func sortedSquares(nums []int) []int {
 	c := r
 
 	for l <= r {
-		if nums[l]*nums[l] < nums[r]*nums[r] {
-			res[c] = nums[r] * nums[r]
+		sqL := nums[l] * nums[l]
+		sqR := nums[r] * nums[r]
+
+		if sqL < sqR {
+			res[c] = sqR
 			r--
 		} else {
-			res[c] = nums[l] * nums[l]
+			res[c] = sqL
 			l++
 		}
 		c--
