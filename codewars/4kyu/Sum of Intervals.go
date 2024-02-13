@@ -46,7 +46,7 @@ func SumOfIntervals(intervals [][2]int) int {
 	return length
 }
 
-func SumOfIntervals2(intervals [][2]int) int {
+func SumOfIntervals_(intervals [][2]int) int {
 	fmt.Println(intervals)
 	added := make([][2]int, 0)
 	i := 0
@@ -107,16 +107,3 @@ func check(added [][2]int, start, end int) (int, bool, bool) {
 	}
 	return 0, false, false
 }
-
-// func SumOfIntervals(intervals [][2]int) int {
-
-// 	mp := make(map[int]int)
-
-// 	for _, v := range intervals {
-// 		for i := v[0]; i < v[1]; i++ {
-// 			mp[i]++
-// 		}
-// 	}
-
-// 	return len(mp)
-// }
