@@ -1,1 +1,5 @@
-package AA
+package main
+
+func main() {
+
+}
