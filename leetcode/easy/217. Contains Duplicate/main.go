@@ -9,14 +9,16 @@ func main() {
 	fmt.Println(containsDuplicate([]int{1, 1, 1, 3, 3, 4, 3, 2, 4, 2}))
 }
 
+// Time complexity O(n) space complexity O(n)
 func containsDuplicate(nums []int) bool {
-	m := make(map[int]struct{})
-	for _, v := range nums {
-		if _, exist := m[v]; exist {
+	seen := make(map[int]bool, len(nums))
+
+	for _, num := range nums {
+		if _, exists := seen[num]; exists {
 			return true
-		} else {
-			m[v] = struct{}{}
 		}
+
+		seen[num] = true
 	}
 
 	return false
