@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/valid-sudoku/description/
 package main
 
 import "fmt"
@@ -34,7 +35,7 @@ func main() {
 func isValidSudoku(board [][]byte) bool {
 	for i := 0; i < 9; i++ {
 		row := make(map[byte]int, 9)
-		col := make(map[byte]int, 9)
+		//col := make(map[byte]int, 9)
 
 		for j := 0; j < 9; j++ {
 
