@@ -11,6 +11,7 @@ func main() {
 	fmt.Println(isAnagram(s2, t2))
 }
 
+// Time complexity O(n) space complexity O(1)
 func isAnagram(s string, t string) bool {
 	if len(s) != len(t) {
 		return false
