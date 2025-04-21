@@ -9,16 +9,15 @@ func main() {
 	fmt.Println(twoSum([]int{3, 3}, 6))
 }
 
-// Time Complexity: O(n)
-// Space Complexity: O(n)
+// Time complexity O(n) space complexity O(n)
 func twoSum(nums []int, target int) []int {
-	m := make(map[int]int)
+	numMap := make(map[int]int)
 
-	for i, v := range nums {
-		if j, ok := m[v]; ok {
-			return []int{j, i}
+	for i, num := range nums {
+		if idx, found := numMap[num]; found {
+			return []int{idx, i}
 		}
-		m[target-v] = i
+		numMap[target-num] = i
 	}
 
 	return []int{}
