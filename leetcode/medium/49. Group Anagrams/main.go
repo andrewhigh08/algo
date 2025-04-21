@@ -10,8 +10,8 @@ func main() {
 	fmt.Println(groupAnagrams([]string{"a"}))
 }
 
-// Сложность по времени (Time Complexity): O(N * K)
-// Сложность по памяти (Space Complexity): O(N * K)
+// Time Complexity: O(N * K)
+// Space Complexity: O(N * K)
 func groupAnagrams(strs []string) [][]string {
 	anMap := make(map[[26]int][]string)
 	for _, s := range strs {

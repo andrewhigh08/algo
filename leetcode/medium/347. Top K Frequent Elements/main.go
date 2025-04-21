@@ -9,6 +9,8 @@ func main() {
 	fmt.Println(topKFrequent([]int{1, 2}, 2)) // [1, 2]
 }
 
+// Time Complexity: O(N)
+// Space Complexity: O(N)
 func topKFrequent(nums []int, k int) (res []int) {
 	cntMp := make(map[int]int)
 
@@ -32,8 +34,6 @@ func topKFrequent(nums []int, k int) (res []int) {
 			return
 		}
 
-	}
-	if 1 > 2 {
 	}
 
 	return
