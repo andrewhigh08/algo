@@ -8,6 +8,8 @@ func main() {
 	fmt.Println(productExceptSelf([]int{-1, 1, 0, -3, 3})) //[0,0,9,0,0]
 }
 
+// Time Complexity: O(N)
+// Space Complexity: O(N)
 func productExceptSelf(nums []int) []int {
 	l := len(nums)
 	res := make([]int, l)
@@ -25,6 +27,8 @@ func productExceptSelf(nums []int) []int {
 	return res
 }
 
+// Time Complexity: O(N)
+// Space Complexity: O(N)
 func productExceptSelf_(nums []int) []int {
 	l := len(nums)
 	res := make([]int, l)
