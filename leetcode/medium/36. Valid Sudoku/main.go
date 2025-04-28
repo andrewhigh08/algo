@@ -34,6 +34,7 @@ func main() {
 	fmt.Println(isValidSudoku(board2))
 }
 
+// Time & space complexity O(1)
 func isValidSudoku(board [][]byte) bool {
 	// Используем map[byte]struct{} для эмуляции сетов (byte, так как цифры - это byte)
 	rows := make([]map[byte]struct{}, 9)    // Слайс сетов для строк
