@@ -73,6 +73,7 @@ func isValidSudoku(board [][]byte) bool {
 				return false // Уже есть в квадрате
 			}
 
+			// Добавляем цифру в соответствующие сеты
 			rows[r][digit] = struct{}{}
 			cols[c][digit] = struct{}{}
 			squares[squareIndex][digit] = struct{}{}
