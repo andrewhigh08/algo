@@ -11,39 +11,43 @@ func main() {
 // Time Complexity: O(N)
 // Space Complexity: O(N)
 func productExceptSelf(nums []int) []int {
+	// Получаем длину входного массива
+	// Get the length of the input array
 	l := len(nums)
+
+	// Создаем массив для результата
+	// Create an array for the result
 	res := make([]int, l)
+
+	// Первый элемент результата устанавливаем в 1
+	// Set the first element of the result to 1
 	res[0] = 1
+
+	// Первый проход: вычисляем произведение всех элементов слева от текущего
+	// First pass: calculate product of all elements to the left of current element
 	for i := 1; i < l; i++ {
+		// res[i] содержит произведение всех чисел до nums[i-1]
+		// res[i] contains the product of all numbers up to nums[i-1]
 		res[i] = res[i-1] * nums[i-1]
 	}
 
+	// Переменная для хранения произведения всех элементов справа от текущего
+	// Variable to store the product of all elements to the right of current element
 	rp := 1
+
+	// Второй проход: умножаем на произведение всех элементов справа
+	// Second pass: multiply by the product of all elements to the right
 	for i := l - 1; i >= 0; i-- {
+		// Умножаем текущий результат на произведение справа
+		// Multiply current result by the product from the right
 		res[i] = res[i] * rp
+
+		// Обновляем произведение справа
+		// Update the product from the right
 		rp = nums[i] * rp
 	}
 
-	return res
-}
-
-// Time Complexity: O(N)
-// Space Complexity: O(N)
-func productExceptSelf_(nums []int) []int {
-	l := len(nums)
-	res := make([]int, l)
-	left := make([]int, l)
-	right := make([]int, l)
-	left[0], right[l-1] = 1, 1
-
-	for l, r := 1, l-2; l < len(nums); l, r = l+1, r-1 {
-		left[l] = left[l-1] * nums[l-1]
-		right[r] = right[r+1] * nums[r+1]
-	}
-
-	for i := 0; i < l; i++ {
-		res[i] = left[i] * right[i]
-	}
-
+	// Возвращаем результат
+	// Return the result
 	return res
 }

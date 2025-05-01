@@ -1,2 +1,1 @@
-# leetcode.com
-my solutions from 'https://leetcode.com/'
+# my solutions and descriptions of problems from [leetcode](https://leetcode.com/)
