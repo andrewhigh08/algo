@@ -38,6 +38,7 @@ func isValid(s string) bool {
 	// Iterate through each character in the string
 	for _, c := range s {
 		// Если это закрывающая скобка
+		// If this is a closing bracket
 		if openBracket, exists := brackets[c]; exists {
 			// Проверяем, что стек не пуст и последняя открывающая скобка соответствует текущей закрывающей
 			// Check that the stack is not empty and the last opening bracket matches the current closing bracket
