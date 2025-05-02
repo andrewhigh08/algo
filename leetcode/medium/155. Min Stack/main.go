@@ -17,6 +17,10 @@ func main() {
 	fmt.Println("getMin():", minStack.GetMin()) // возвращает -2
 }
 
+//Time complexity O(1), Space complexity O(n)
+
+// MinStack is a stack that keeps track of the minimum value
+// MinStack - это стек, который отслеживает минимальное значение
 type MinStack struct {
 	min   int   // Current minimum value / Текущее минимальное значение
 	stack []int // Stack storage with encoded values / Хранилище стека с закодированными значениями
