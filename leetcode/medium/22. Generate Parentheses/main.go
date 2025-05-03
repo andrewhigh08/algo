@@ -9,5 +9,9 @@ func main() {
 }
 
 func generateParenthesis(n int) []string {
+	var (
+		res   []string
+		stack []string
+	)
 
 }
