@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Print(2/3, "⁰¹²³⁴⁵⁶⁷⁸⁹≤≥")
+	fmt.Print(1221 % 10)
 }
