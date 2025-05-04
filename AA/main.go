@@ -5,5 +5,3 @@ import "fmt"
 func main() {
 	fmt.Print(2/3, "⁰¹²³⁴⁵⁶⁷⁸⁹≤≥")
 }
-
-//![]()
