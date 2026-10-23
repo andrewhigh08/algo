@@ -4,10 +4,9 @@ package main
 import "fmt"
 
 func main() {
-	//groupAnagrams([]string{"eat", "tea", "tan", "ate", "nat", "bat"}) //["bat"],["nat","tan"],["ate","eat","tea"]]
-	fmt.Println(groupAnagrams([]string{"eat", "tea", "tan", "ate", "nat", "bat"}))
-	fmt.Println(groupAnagrams([]string{""}))
-	fmt.Println(groupAnagrams([]string{"a"}))
+	fmt.Println(groupAnagrams([]string{"eat", "tea", "tan", "ate", "nat", "bat"})) // [[bat] [nat tan] [ate eat tea]] (в любом порядке)
+	fmt.Println(groupAnagrams([]string{""}))                                       // [[]]
+	fmt.Println(groupAnagrams([]string{"a"}))                                      // [[a]]
 }
 
 // Time Complexity: O(N * K)
@@ -23,8 +22,6 @@ func groupAnagrams(strs []string) [][]string {
 		}
 
 		anMap[cnt] = append(anMap[cnt], s)
-		//fmt.Printf("%v\n", anMap)
-
 	}
 
 	var res = make([][]string, len(anMap))
@@ -34,6 +31,5 @@ func groupAnagrams(strs []string) [][]string {
 		idx++
 	}
 
-	//fmt.Println(res)
 	return res
 }

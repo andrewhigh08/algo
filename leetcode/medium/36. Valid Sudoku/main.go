@@ -30,8 +30,8 @@ func main() {
 		{'.', '.', '.', '.', '8', '.', '.', '7', '9'},
 	}
 
-	fmt.Println(isValidSudoku(board1))
-	fmt.Println(isValidSudoku(board2))
+	fmt.Println(isValidSudoku(board1)) // true
+	fmt.Println(isValidSudoku(board2)) // false
 }
 
 // Time & space complexity O(1)

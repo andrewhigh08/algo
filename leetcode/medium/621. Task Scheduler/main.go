@@ -1,2 +1,15 @@
-// https://aistudio.google.com/app/prompts/1-tQ_MB3KckPg-hIbZP_mt3HuF6cVztxQ
+// https://leetcode.com/problems/task-scheduler/description/
 package main
+
+import "fmt"
+
+func main() {
+	fmt.Println(leastInterval([]byte{'A', 'A', 'A', 'B', 'B', 'B'}, 2)) // 8
+	fmt.Println(leastInterval([]byte{'A', 'C', 'A', 'B', 'D', 'B'}, 1)) // 6
+	fmt.Println(leastInterval([]byte{'A', 'A', 'A', 'B', 'B', 'B'}, 3)) // 10
+}
+
+func leastInterval(tasks []byte, n int) int {
+	// TODO: решить
+	return 0
+}

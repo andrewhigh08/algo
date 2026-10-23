@@ -11,10 +11,10 @@ func main() {
 	nums2 := []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4} // - slice (dynamic array)
 	//                            l
 	//                                        r
-	fmt.Println(removeDuplicates(nums1))
-	fmt.Println(nums1)
-	fmt.Println(removeDuplicates(nums2))
-	fmt.Println(nums2)
+	fmt.Println(removeDuplicates(nums1)) // 2
+	fmt.Println(nums1)                   // [1 2 _]
+	fmt.Println(removeDuplicates(nums2)) // 5
+	fmt.Println(nums2)                   // [0 1 2 3 4 _ _ _ _ _]
 }
 
 // Time complexity: O(n)

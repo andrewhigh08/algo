@@ -7,12 +7,12 @@ func main() {
 	// Тестовый пример 1: [3, 2, 2, 3] с удалением элемента 3
 	// Test case 1: [3, 2, 2, 3] with element 3 to be removed
 	n1 := []int{3, 2, 2, 3}
-	fmt.Println(removeElement(n1, 3), "nums = ", n1)
+	fmt.Println(removeElement(n1, 3), "nums = ", n1) // 2 nums =  [2 2 _ _]
 
 	// Тестовый пример 2: [0, 1, 2, 2, 3, 0, 4, 2] с удалением элемента 2
 	// Test case 2: [0, 1, 2, 2, 3, 0, 4, 2] with element 2 to be removed
 	n2 := []int{0, 1, 2, 2, 3, 0, 4, 2}
-	fmt.Println(removeElement(n2, 2), "nums = ", n2)
+	fmt.Println(removeElement(n2, 2), "nums = ", n2) // 5 nums =  [0 1 4 0 3 _ _ _] (в любом порядке)
 }
 
 // Time complexity: O(n)

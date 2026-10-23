@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/encode-and-decode-strings/description/
+// https://leetcode.com/problems/encode-and-decode-strings/description/ (Premium)
 // https://www.lintcode.com/problem/659/
 package main
 
@@ -11,12 +11,12 @@ import (
 
 func main() {
 	encodedString := encodeString([]string{"Вася", "code", "love", "you"})
-	fmt.Println(encodedString)
-	fmt.Println(decodeString(encodedString))
+	fmt.Println(encodedString)               // 4#Вася4#code4#love3#you
+	fmt.Println(decodeString(encodedString)) // [Вася code love you]
 
 	encodedString2 := encodeString([]string{"we", "say", ":", "yes"})
-	fmt.Println(encodedString2)
-	fmt.Println(decodeString(encodedString2))
+	fmt.Println(encodedString2)               // 2#we3#say1#:3#yes
+	fmt.Println(decodeString(encodedString2)) // [we say : yes]
 }
 
 // Time & space complexity O(n)

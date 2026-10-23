@@ -6,8 +6,6 @@ import (
 	"strings"
 )
 
-// Время (Time): O(C_n * n) или O(4^n / sqrt(n))
-// Память (Space): O(C_n * n)
 func main() {
 	fmt.Println(generateParenthesis(3)) // ["((()))","(()())","(())()","()(())","()()()"]
 	fmt.Println(generateParenthesis(1)) // ["()"]
@@ -17,6 +15,9 @@ func main() {
 // Использует подход с бэктрекингом и стеком.
 // generateParenthesis generates all valid combinations of n pairs of parentheses.
 // It uses a backtracking approach with a stack.
+//
+// Время (Time): O(C_n * n) или O(4^n / sqrt(n))
+// Память (Space): O(C_n * n)
 func generateParenthesis(n int) []string {
 	var res []string   // Слайс для хранения результатов. / Slice to store the results.
 	var stack []string // Слайс, используемый как стек для построения текущей комбинации. / Slice used as a stack to build the current combination.

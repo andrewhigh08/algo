@@ -1,12 +1,12 @@
-// https://leetcode.com/problems/palindrome-number/
+// https://leetcode.com/problems/palindrome-number/description/
 package main
 
 import "fmt"
 
 func main() {
-	fmt.Println(isPalindrome(121))
-	fmt.Println(isPalindrome(-121))
-	fmt.Println(isPalindrome(10))
+	fmt.Println(isPalindrome(121))  // true
+	fmt.Println(isPalindrome(-121)) // false
+	fmt.Println(isPalindrome(10))   // false
 }
 
 // Time complexity: O(log₁₀(x))

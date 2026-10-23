@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/valid-anagram/
+// https://leetcode.com/problems/valid-anagram/description/
 package main
 
 import "fmt"

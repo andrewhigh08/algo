@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/top-k-frequent-elements/
+// https://leetcode.com/problems/top-k-frequent-elements/description/
 package main
 
 import "fmt"
