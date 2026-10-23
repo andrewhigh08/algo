@@ -1,22 +1,28 @@
-# 131. [Разбиение на палиндромы (Palindrome Partitioning)](https://leetcode.com/problems/palindrome-partitioning/description/)
+# 131. Palindrome Partitioning
 
-`Medium`
+**Разбиение на палиндромы** · 🟡 Medium · Backtracking · [LeetCode](https://leetcode.com/problems/palindrome-partitioning/description/)
 
-Дана строка `s`, разбейте `s` так, чтобы каждая подстрока разбиения была **палиндромом**. Верните все возможные разбиения `s` на палиндромы.
+## Условие
+
+Дана строка `s`. Разбейте `s` так, чтобы каждая подстрока разбиения была **палиндромом**. Верните *все возможные разбиения `s` на палиндромы*.
+
+## Примеры
 
 **Пример 1:**
-```
+
+```text
 Input: s = "aab"
 Output: [["a","a","b"],["aa","b"]]
 ```
 
 **Пример 2:**
-```
+
+```text
 Input: s = "a"
 Output: [["a"]]
 ```
 
-**Ограничения:**
+## Ограничения
 
-*   1 ≤ `s.length` ≤ 16
-*   `s` содержит только строчные английские буквы.
+- `1 ≤ s.length ≤ 16`
+- `s` содержит только строчные английские буквы.

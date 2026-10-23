@@ -1,40 +1,42 @@
-# 981. [Хранилище Ключ-Значение на основе времени (Time Based Key-Value Store)](https://leetcode.com/problems/time-based-key-value-store/description/)
+# 981. Time Based Key-Value Store
 
-сложность: `Medium`
+**Хранилище ключ-значение на основе времени** · 🟡 Medium · Binary Search · [LeetCode](https://leetcode.com/problems/time-based-key-value-store/description/)
 
-Разработайте структуру данных ключ-значение на основе времени, которая может хранить несколько значений для одного и того же ключа в разные моменты времени (timestamp) и получать значение ключа в определенный момент времени.
+## Условие
+
+Спроектируйте структуру данных «ключ-значение» на основе времени, которая может хранить несколько значений для одного и того же ключа с разными метками времени и получать значение ключа на определённый момент времени.
 
 Реализуйте класс `TimeMap`:
 
-*   `TimeMap()` Инициализирует объект структуры данных.
-*   `void set(String key, String value, int timestamp)` Сохраняет ключ `key` со значением `value` в заданный момент времени `timestamp`.
-*   `String get(String key, int timestamp)` Возвращает значение `value` такое, что ранее был вызван `set` с тем же `key` и моментом времени `timestamp_prev <= timestamp`. Если таких значений несколько, возвращается значение, связанное с наибольшим `timestamp_prev`. Если значений нет, возвращается "".
+- `TimeMap()` — инициализирует объект структуры данных.
+- `void set(String key, String value, int timestamp)` — сохраняет ключ `key` со значением `value` в момент времени `timestamp`.
+- `String get(String key, int timestamp)` — возвращает значение, для которого ранее был вызван `set` с тем же `key` и меткой времени `timestamp_prev ≤ timestamp`. Если таких значений несколько, возвращает значение с наибольшим `timestamp_prev`. Если значений нет, возвращает `""`.
 
-Обратите внимание, что все моменты времени `timestamp` для вызовов `set` строго возрастают.
+## Примеры
 
-```
-Пример 1:
+**Пример 1:**
 
+```text
 Input
 ["TimeMap", "set", "get", "get", "set", "get", "get"]
 [[], ["foo", "bar", 1], ["foo", 1], ["foo", 3], ["foo", "bar2", 4], ["foo", 4], ["foo", 5]]
 Output
 [null, null, "bar", "bar", null, "bar2", "bar2"]
 
-Объяснение
+Explanation
 TimeMap timeMap = new TimeMap();
-timeMap.set("foo", "bar", 1);  // store the key "foo" and value "bar" along with timestamp = 1.
-timeMap.get("foo", 1);         // return "bar"
-timeMap.get("foo", 3);         // return "bar", since there is no value corresponding to foo at timestamp 3 and timestamp 2, then the only value is at timestamp 1 is "bar".
-timeMap.set("foo", "bar2", 4); // store the key "foo" and value "bar2" along with timestamp = 4.
-timeMap.get("foo", 4);         // return "bar2"
-timeMap.get("foo", 5);         // return "bar2"
+timeMap.set("foo", "bar", 1);  // сохраняем ключ "foo" со значением "bar" и меткой времени timestamp = 1
+timeMap.get("foo", 1);         // возвращает "bar"
+timeMap.get("foo", 3);         // возвращает "bar": для "foo" нет значений с метками 3 и 2, единственное значение — "bar" с меткой 1
+timeMap.set("foo", "bar2", 4); // сохраняем ключ "foo" со значением "bar2" и меткой времени timestamp = 4
+timeMap.get("foo", 4);         // возвращает "bar2"
+timeMap.get("foo", 5);         // возвращает "bar2"
 ```
 
-**Ограничения:**
+## Ограничения
 
-*   `1 ≤ key.length, value.length ≤ 100`
-*   `key` и `value` состоят из строчных английских букв и цифр.
-*   `1 ≤ timestamp ≤ 10⁷`
-*   Все моменты времени `timestamp` вызовов `set` строго возрастают.
-*   Будет сделано не более 2 * 10⁵ вызовов методов `set` и `get`.
+- `1 ≤ key.length, value.length ≤ 100`
+- `key` и `value` состоят из строчных английских букв и цифр.
+- `1 ≤ timestamp ≤ 10⁷`
+- Все метки времени `timestamp` в вызовах `set` строго возрастают.
+- Будет сделано не более `2 * 10⁵` вызовов `set` и `get`.

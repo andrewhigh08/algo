@@ -1,43 +1,56 @@
-# 97. [Чередующаяся Строка (Interleaving String)]()
+# 97. Interleaving String
 
-`Medium`
+**Чередующаяся строка** · 🟡 Medium · 2-D Dynamic Programming · [LeetCode](https://leetcode.com/problems/interleaving-string/description/)
 
-Даны строки `s1`, `s2`, `s3`. Найдите, образована ли `s3` **чередованием** `s1` и `s2`.
+## Условие
 
-**Чередование** двух строк `s` и `t` - это конфигурация, где `s` и `t` разделены на `n` и `m` **подстрок** соответственно, так что:
+Даны строки `s1`, `s2` и `s3`. Определите, образована ли `s3` **чередованием** строк `s1` и `s2`.
 
-*   `s = s₁ + s₂ + ... + sₙ`
-*   `t = t₁ + t₂ + ... + tₘ`
-*   `|n - m| ≤ 1`
-*   **Чередование** равно `s₁ + t₁ + s₂ + t₂ + s₃ + t₃ + ...` или `t₁ + s₁ + t₂ + s₂ + t₃ + s₃ + ...`
+**Чередование** двух строк `s` и `t` — это конфигурация, в которой `s` и `t` разбиты на `n` и `m` непустых подстрок соответственно, так что:
 
-**Примечание:** `a + b` - это конкатенация строк `a` и `b`.
+- `s = s₁ + s₂ + ... + sₙ`
+- `t = t₁ + t₂ + ... + tₘ`
+- `|n - m| ≤ 1`
+- **Чередование** — это `s₁ + t₁ + s₂ + t₂ + s₃ + t₃ + ...` или `t₁ + s₁ + t₂ + s₂ + t₃ + s₃ + ...`
 
-Example 1:\
-![](https://assets.leetcode.com/uploads/2020/09/02/interleave.jpg)
-```
+**Примечание:** `a + b` — это конкатенация строк `a` и `b`.
+
+## Примеры
+
+**Пример 1:**
+
+![Пример 1](https://assets.leetcode.com/uploads/2020/09/02/interleave.jpg)
+
+```text
 Input: s1 = "aabcc", s2 = "dbbca", s3 = "aadbbcbcac"
 Output: true
-Explanation: One way to obtain s3 is:
-Split s1 into s1 = "aa" + "bc" + "c", and s2 into s2 = "dbbc" + "a".
-Interleaving the two splits, we get "aa" + "dbbc" + "bc" + "a" + "c" = "aadbbcbcac".
-Since s3 can be obtained by interleaving s1 and s2, we return true.
+Explanation: один из способов получить s3:
+Разбиваем s1 на s1 = "aa" + "bc" + "c", а s2 — на s2 = "dbbc" + "a".
+Чередуя части двух разбиений, получаем "aa" + "dbbc" + "bc" + "a" + "c" = "aadbbcbcac".
+Так как s3 можно получить чередованием s1 и s2, возвращаем true.
+```
 
-Example 2:
+**Пример 2:**
 
+```text
 Input: s1 = "aabcc", s2 = "dbbca", s3 = "aadbbbaccc"
 Output: false
-Explanation: Notice how it is impossible to interleave s2 with any other string to obtain s3.
+Explanation: обратите внимание, что s3 невозможно получить чередованием s2 ни с какой другой строкой.
+```
 
-Example 3:
+**Пример 3:**
 
+```text
 Input: s1 = "", s2 = "", s3 = ""
 Output: true
 ```
-**Ограничения:**
 
-*   0 ≤ `s1.length`, `s2.length` ≤ 100
-*   0 ≤ `s3.length` ≤ 200
-*   `s1`, `s2` и `s3` состоят из строчных английских букв.
+## Ограничения
 
-**Дополнительный вопрос:** Можете ли вы решить эту задачу, используя только `O(s2.length)` дополнительного пространства памяти?
+- `0 ≤ s1.length, s2.length ≤ 100`
+- `0 ≤ s3.length ≤ 200`
+- `s1`, `s2` и `s3` состоят из строчных английских букв.
+
+## Дополнительный вопрос
+
+Сможете ли вы решить задачу, используя только `O(s2.length)` дополнительной памяти?

@@ -1,30 +1,34 @@
-# 84. [Самый большой прямоугольник в гистограмме (Largest Rectangle in Histogram)](https://leetcode.com/problems/largest-rectangle-in-histogram/description/)
+# 84. Largest Rectangle in Histogram
 
-сложность: `Hard`
+**Самый большой прямоугольник в гистограмме** · 🔴 Hard · Stack · [LeetCode](https://leetcode.com/problems/largest-rectangle-in-histogram/description/)
 
-Дан массив целых чисел `heights`, представляющий высоты столбцов гистограммы, где ширина каждого столбца равна 1. Верните *площадь самого большого прямоугольника в гистограмме*.
+## Условие
+
+Дан массив целых чисел `heights`, представляющий высоты столбцов гистограммы, где ширина каждого столбца равна `1`. Верните *площадь самого большого прямоугольника в гистограмме*.
+
+## Примеры
 
 **Пример 1:**
 
-![Гистограмма для Примера 1](https://assets.leetcode.com/uploads/2021/01/04/histogram.jpg)
+![Пример 1](https://assets.leetcode.com/uploads/2021/01/04/histogram.jpg)
 
-```
+```text
 Input: heights = [2,1,5,6,2,3]
 Output: 10
-Explanation: The above is a histogram where width of each bar is 1.
-The largest rectangle is shown in the red area, which has an area = 10 units.
+Explanation: выше изображена гистограмма, ширина каждого столбца которой равна 1.
+Самый большой прямоугольник выделен красным, его площадь равна 10 единицам.
 ```
 
 **Пример 2:**
 
-![Гистограмма для Примера 2](https://assets.leetcode.com/uploads/2021/01/04/histogram-1.jpg)
+![Пример 2](https://assets.leetcode.com/uploads/2021/01/04/histogram-1.jpg)
 
-```
+```text
 Input: heights = [2,4]
 Output: 4
 ```
 
-**Ограничения:**
+## Ограничения
 
-*   `1 ≤ heights.length ≤ 10⁵`
-*   `0 ≤ heights[i] ≤ 10⁴`
+- `1 ≤ heights.length ≤ 10⁵`
+- `0 ≤ heights[i] ≤ 10⁴`

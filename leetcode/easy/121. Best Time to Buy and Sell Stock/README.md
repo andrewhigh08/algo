@@ -1,29 +1,35 @@
-# 121. [Лучшее время для покупки и продажи акций (Best Time to Buy and Sell Stock)](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
+# 121. Best Time to Buy and Sell Stock
 
-сложность: `Easy`
+**Лучшее время для покупки и продажи акций** · 🟢 Easy · Sliding Window · [LeetCode](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
 
-Дан массив `prices`, где `prices[i]` - это цена акции в `i`-й день.
+## Условие
 
-Вы хотите максимизировать свою прибыль, выбрав **один день** для покупки одной акции и выбрав **другой день** в будущем для продажи этой акции.
+Дан массив `prices`, где `prices[i]` — цена акции в `i`-й день.
 
-Верните максимальную прибыль, которую вы можете получить от этой сделки. Если вы не можете получить никакой прибыли, верните 0.
+Вы хотите максимизировать свою прибыль, выбрав **один день** для покупки одной акции и **другой день в будущем** для продажи этой акции.
 
-```
-Пример 1:
+Верните *максимальную прибыль, которую можно получить от этой сделки*. Если никакой прибыли получить нельзя, верните `0`.
 
+## Примеры
+
+**Пример 1:**
+
+```text
 Input: prices = [7,1,5,3,6,4]
 Output: 5
-Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
-Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
-
-Пример 2:
-
-Input: prices = [7,6,4,3,1]
-Output: 0
-Explanation: In this case, no transactions are done and the max profit = 0.
+Explanation: покупаем во 2-й день (цена = 1) и продаём в 5-й день (цена = 6), прибыль = 6-1 = 5.
+Обратите внимание, что купить во 2-й день и продать в 1-й нельзя: покупать нужно до продажи.
 ```
 
-**Ограничения:**
+**Пример 2:**
 
-*   `1 ≤ prices.length ≤ 10⁵`
-*   `0 ≤ prices[i] ≤ 10⁴`
+```text
+Input: prices = [7,6,4,3,1]
+Output: 0
+Explanation: в этом случае сделок не совершается, и максимальная прибыль = 0.
+```
+
+## Ограничения
+
+- `1 ≤ prices.length ≤ 10⁵`
+- `0 ≤ prices[i] ≤ 10⁴`

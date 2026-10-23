@@ -1,35 +1,41 @@
-# 127. [Лестница Слов (Word Ladder)](https://leetcode.com/problems/word-ladder/description/)
+# 127. Word Ladder
 
-`Hard`
+**Лестница слов** · 🔴 Hard · Graphs · [LeetCode](https://leetcode.com/problems/word-ladder/description/)
 
-**Последовательность преобразований** от слова `beginWord` к слову `endWord` с использованием словаря `wordList` - это последовательность слов `beginWord -> s₁ -> s₂ -> ... -> sk` такая, что:
+## Условие
 
-*   Каждая соседняя пара слов отличается одной буквой.
-*   Каждое `si` для `1 <= i <= k` находится в `wordList`. Обратите внимание, что `beginWord` не обязательно должен быть в `wordList`.
-*   `sk == endWord`
+**Последовательность преобразований** от слова `beginWord` к слову `endWord` с использованием словаря `wordList` — это последовательность слов `beginWord -> s₁ -> s₂ -> ... -> sₖ`, такая что:
 
-Даны два слова, `beginWord` и `endWord`, и словарь `wordList`, верните *количество слов в кратчайшей последовательности преобразований* от `beginWord` до `endWord`, или `0`, если такой последовательности не существует.
+- каждая пара соседних слов отличается ровно одной буквой;
+- каждое `sᵢ` для `1 ≤ i ≤ k` есть в `wordList`. Обратите внимание, что `beginWord` не обязательно должно быть в `wordList`;
+- `sₖ == endWord`.
+
+Даны два слова, `beginWord` и `endWord`, и словарь `wordList`. Верните **количество слов** в **кратчайшей последовательности преобразований** от `beginWord` до `endWord` или `0`, если такой последовательности не существует.
+
+## Примеры
 
 **Пример 1:**
-```
+
+```text
 Input: beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log","cog"]
 Output: 5
-Explanation: Одна из кратчайших последовательностей преобразований - "hit" -> "hot" -> "dot" -> "dog" -> "cog", которая состоит из 5 слов.
+Explanation: одна из кратчайших последовательностей преобразований — "hit" -> "hot" -> "dot" -> "dog" -> "cog", она состоит из 5 слов.
 ```
 
 **Пример 2:**
-```
+
+```text
 Input: beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log"]
 Output: 0
-Explanation: Слово "cog" отсутствует в wordList, поэтому допустимой последовательности преобразований не существует.
+Explanation: слова endWord "cog" нет в wordList, поэтому допустимой последовательности преобразований не существует.
 ```
 
-**Ограничения:**
+## Ограничения
 
-*   1 ≤ `beginWord.length` ≤ 10
-*   `endWord.length == beginWord.length`
-*   1 ≤ `wordList.length` ≤ 5000
-*   `wordList[i].length == beginWord.length`
-*   `beginWord`, `endWord` и `wordList[i]` состоят из строчных английских букв.
-*   `beginWord != endWord`
-*   Все слова в `wordList` уникальны.
+- `1 ≤ beginWord.length ≤ 10`
+- `endWord.length == beginWord.length`
+- `1 ≤ wordList.length ≤ 5000`
+- `wordList[i].length == beginWord.length`
+- `beginWord`, `endWord` и `wordList[i]` состоят из строчных английских букв.
+- `beginWord ≠ endWord`
+- Все слова в `wordList` **уникальны**.

@@ -1,30 +1,39 @@
-# 226. [Инвертировать бинарное дерево (Invert Binary Tree)](https://leetcode.com/problems/invert-binary-tree/description/)
+# 226. Invert Binary Tree
 
-`Easy`
+**Инвертировать бинарное дерево** · 🟢 Easy · Trees · [LeetCode](https://leetcode.com/problems/invert-binary-tree/description/)
 
-Дан `root` бинарного дерева, инвертируйте дерево и верните его `root`.
+## Условие
 
-**Пример 1:**\
-![](https://assets.leetcode.com/uploads/2021/03/14/invert1-tree.jpg)
-```
+Дан корень бинарного дерева `root`. Инвертируйте дерево и верните *его корень*.
+
+## Примеры
+
+**Пример 1:**
+
+![Пример 1](https://assets.leetcode.com/uploads/2021/03/14/invert1-tree.jpg)
+
+```text
 Input: root = [4,2,7,1,3,6,9]
 Output: [4,7,2,9,6,3,1]
 ```
 
-**Пример 2:**\
-![](https://assets.leetcode.com/uploads/2021/03/14/invert2-tree.jpg)
-```
+**Пример 2:**
+
+![Пример 2](https://assets.leetcode.com/uploads/2021/03/14/invert2-tree.jpg)
+
+```text
 Input: root = [2,1,3]
 Output: [2,3,1]
 ```
 
 **Пример 3:**
-```
+
+```text
 Input: root = []
 Output: []
 ```
 
-**Ограничения:**
+## Ограничения
 
-*   Количество узлов в дереве находится в диапазоне [0, 100].
-*   -100 ≤ `Node.val` ≤ 100
+- Количество узлов в дереве — в диапазоне `[0, 100]`.
+- `-100 ≤ Node.val ≤ 100`

@@ -1,17 +1,22 @@
-# 72. [Расстояние Редактирования (Edit Distance)](https://leetcode.com/problems/edit-distance/description/)
+# 72. Edit Distance
 
-`Medium`
+**Редакционное расстояние** · 🟡 Medium · 2-D Dynamic Programming · [LeetCode](https://leetcode.com/problems/edit-distance/description/)
 
-Даны две строки `word1` и `word2`, верните *минимальное количество операций, необходимое для преобразования `word1` в `word2`*.
+## Условие
 
-У вас есть следующие три операции, разрешенные для слова:
+Даны две строки `word1` и `word2`. Верните *минимальное количество операций, необходимых для преобразования `word1` в `word2`*.
 
-*   Вставить символ
-*   Удалить символ
-*   Заменить символ
+Над словом разрешены следующие три операции:
+
+- Вставить символ
+- Удалить символ
+- Заменить символ
+
+## Примеры
 
 **Пример 1:**
-```
+
+```text
 Input: word1 = "horse", word2 = "ros"
 Output: 3
 Explanation:
@@ -21,7 +26,8 @@ rose -> ros (удалить 'e')
 ```
 
 **Пример 2:**
-```
+
+```text
 Input: word1 = "intention", word2 = "execution"
 Output: 5
 Explanation:
@@ -32,7 +38,7 @@ exention -> exection (заменить 'n' на 'c')
 exection -> execution (вставить 'u')
 ```
 
-**Ограничения:**
+## Ограничения
 
-*   0 ≤ `word1.length`, `word2.length` ≤ 500
-*   `word1` и `word2` состоят из строчных английских букв.
+- `0 ≤ word1.length, word2.length ≤ 500`
+- `word1` и `word2` состоят из строчных английских букв.

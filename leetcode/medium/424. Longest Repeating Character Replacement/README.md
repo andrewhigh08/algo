@@ -1,33 +1,35 @@
-# 424. [Самая длинная подстрока с повторяющимися символами после замены (Longest Repeating Character Replacement)](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)
+# 424. Longest Repeating Character Replacement
 
-сложность: `Medium`
+**Самая длинная подстрока с повторяющимися символами после замены** · 🟡 Medium · Sliding Window · [LeetCode](https://leetcode.com/problems/longest-repeating-character-replacement/description/)
 
-Вам дана строка `s` и целое число `k`. Вы можете выбрать любой символ строки и изменить его на любой другой символ английского алфавита в верхнем регистре. Вы можете выполнить эту операцию не более `k` раз.
+## Условие
 
-Верните длину самой длинной подстроки, содержащей один и тот же символ, которую вы можете получить после выполнения вышеуказанных операций.
+Дана строка `s` и целое число `k`. Можно выбрать любой символ строки и заменить его на любую другую заглавную английскую букву. Эту операцию можно выполнить не более `k` раз.
 
+Верните *длину самой длинной подстроки, состоящей из одной и той же буквы, которую можно получить после выполнения этих операций*.
+
+## Примеры
+
+**Пример 1:**
+
+```text
+Input: s = "ABAB", k = 2
+Output: 4
+Explanation: заменяем обе 'A' на 'B' или наоборот.
 ```
-Пример 1:
 
-Input: s = "abcabcbb"
-Output: 3
-Объяснение: The answer is "abc", with the length of 3.
+**Пример 2:**
 
-Пример 2:
-
-Input: s = "bbbbb"
-Output: 1
-Объяснение: The answer is "b", with the length of 1.
-
-Пример 3:
-
-Input: s = "pwwkew"
-Output: 3
-Объяснение: The answer is "wke", with the length of 3.
-Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+```text
+Input: s = "AABABBA", k = 1
+Output: 4
+Explanation: заменяем одну 'A' в середине на 'B' и получаем "AABBBBA".
+Подстрока "BBBB" — самая длинная подстрока из одинаковых букв, её длина равна 4.
+Этот ответ можно получить и другими способами.
 ```
-**Ограничения:**
 
-*   `1 ≤ s.length ≤ 10⁵`
-*   `s` состоит только из английских букв в верхнем регистре.
-*   `0 ≤ k ≤ s.length`
+## Ограничения
+
+- `1 ≤ s.length ≤ 10⁵`
+- `s` состоит только из заглавных английских букв.
+- `0 ≤ k ≤ s.length`

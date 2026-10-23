@@ -1,32 +1,41 @@
-# 125. [Проверка на палиндром (Valid Palindrome)](https://leetcode.com/problems/valid-palindrome/description/)
+# 125. Valid Palindrome
 
-сложность: `Easy`
+**Проверка на палиндром** · 🟢 Easy · Two Pointers · [LeetCode](https://leetcode.com/problems/valid-palindrome/description/)
 
-Фраза является **палиндромом**, если после преобразования всех заглавных букв в строчные и удаления всех не буквенно-цифровых символов она читается одинаково как вперед, так и назад. Буквенно-цифровые символы включают буквы и цифры.
+## Условие
 
-Дана строка `s`, верните `true`, если она является палиндромом, или `false` в противном случае.
+Фраза является **палиндромом**, если после преобразования всех заглавных букв в строчные и удаления всех небуквенно-цифровых символов она читается одинаково как вперёд, так и назад. Буквенно-цифровые символы включают буквы и цифры.
 
-```
-Пример 1:
+Дана строка `s`. Верните `true`, *если она является **палиндромом***, или `false` *в противном случае*.
 
+## Примеры
+
+**Пример 1:**
+
+```text
 Input: s = "A man, a plan, a canal: Panama"
 Output: true
-Explanation: "amanaplanacanalpanama" is a palindrome.
+Explanation: "amanaplanacanalpanama" — палиндром.
+```
 
-Пример 2:
+**Пример 2:**
 
+```text
 Input: s = "race a car"
 Output: false
-Explanation: "raceacar" is not a palindrome.
+Explanation: "raceacar" — не палиндром.
+```
 
-Пример 3:
+**Пример 3:**
 
+```text
 Input: s = " "
 Output: true
-Explanation: s is an empty string "" after removing non-alphanumeric characters.
-Since an empty string reads the same forward and backward, it is a palindrome.
+Explanation: после удаления небуквенно-цифровых символов s становится пустой строкой "".
+Пустая строка читается одинаково вперёд и назад, поэтому она — палиндром.
 ```
-**Ограничения:**
 
-*   `1 ≤ s.length ≤ 2 * 10⁵`
-*   `s` состоит только из печатных символов ASCII.
+## Ограничения
+
+- `1 ≤ s.length ≤ 2 * 10⁵`
+- `s` состоит только из печатных символов ASCII.

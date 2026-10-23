@@ -1,19 +1,24 @@
-# 146. [LRU кэш (LRU Cache)](https://leetcode.com/problems/lru-cache/description/)
+# 146. LRU Cache
 
-`Medium`
+**LRU-кэш** · 🟡 Medium · Linked List · [LeetCode](https://leetcode.com/problems/lru-cache/description/)
 
-Разработайте структуру данных, которая соответствует ограничениям кэша **Least Recently Used (LRU)**.
+## Условие
+
+Спроектируйте структуру данных, которая соблюдает ограничения [кэша **LRU** (Least Recently Used)](https://en.wikipedia.org/wiki/Cache_replacement_policies#LRU).
 
 Реализуйте класс `LRUCache`:
 
-*   `LRUCache(int capacity)` Инициализирует LRU кэш с **положительным** размером `capacity`.
-*   `int get(int key)` Возвращает значение `key`, если ключ существует, иначе возвращает -1.
-*   `void put(int key, int value)` Обновляет значение `key`, если `key` существует. В противном случае добавьте пару ключ-значение в кэш. Если количество ключей превышает `capacity` в результате этой операции, **вытесните** наименее недавно использованный ключ.
+- `LRUCache(int capacity)` — инициализирует LRU-кэш с **положительным** размером `capacity`.
+- `int get(int key)` — возвращает значение по ключу `key`, если ключ существует, иначе возвращает `-1`.
+- `void put(int key, int value)` — обновляет значение `key`, если ключ существует. Иначе добавляет пару `key-value` в кэш. Если после этой операции число ключей превышает `capacity`, **вытесняет** ключ, который использовался давнее всех.
 
-Функции `get` и `put` должны выполняться со средней временной сложностью O(1).
+Функции `get` и `put` должны работать в среднем за `O(1)`.
+
+## Примеры
 
 **Пример 1:**
-```
+
+```text
 Input
 ["LRUCache", "put", "put", "get", "put", "get", "put", "get", "get", "get"]
 [[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]
@@ -22,20 +27,20 @@ Output
 
 Explanation
 LRUCache lRUCache = new LRUCache(2);
-lRUCache.put(1, 1); // cache is {1=1}
-lRUCache.put(2, 2); // cache is {1=1, 2=2}
-lRUCache.get(1);    // return 1
-lRUCache.put(3, 3); // LRU key was 2, evicts key 2, cache is {1=1, 3=3}
-lRUCache.get(2);    // returns -1 (not found)
-lRUCache.put(4, 4); // LRU key was 1, evicts key 1, cache is {4=4, 3=3}
-lRUCache.get(1);    // return -1 (not found)
-lRUCache.get(3);    // return 3
-lRUCache.get(4);    // return 4
+lRUCache.put(1, 1); // кэш: {1=1}
+lRUCache.put(2, 2); // кэш: {1=1, 2=2}
+lRUCache.get(1);    // возвращает 1
+lRUCache.put(3, 3); // давнее всех использовался ключ 2, вытесняем его, кэш: {1=1, 3=3}
+lRUCache.get(2);    // возвращает -1 (не найден)
+lRUCache.put(4, 4); // давнее всех использовался ключ 1, вытесняем его, кэш: {4=4, 3=3}
+lRUCache.get(1);    // возвращает -1 (не найден)
+lRUCache.get(3);    // возвращает 3
+lRUCache.get(4);    // возвращает 4
 ```
 
-**Ограничения:**
+## Ограничения
 
-*   1 ≤ `capacity` ≤ 3000
-*   0 ≤ `key` ≤ 10⁴
-*   0 ≤ `value` ≤ 10⁵
-*   Будет сделано не более 2 * 10⁵ вызовов к `get` и `put`.
+- `1 ≤ capacity ≤ 3000`
+- `0 ≤ key ≤ 10⁴`
+- `0 ≤ value ≤ 10⁵`
+- Будет сделано не более `2 * 10⁵` вызовов `get` и `put`.

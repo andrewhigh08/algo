@@ -1,26 +1,34 @@
-# 54. [Спиральная Матрица (Spiral Matrix)](https://leetcode.com/problems/spiral-matrix/description/)
+# 54. Spiral Matrix
 
-`Medium`
+**Спиральная матрица** · 🟡 Medium · Math & Geometry · [LeetCode](https://leetcode.com/problems/spiral-matrix/description/)
 
-Дана матрица `matrix` размером `m x n`, верните все элементы матрицы в спиральном порядке.
+## Условие
 
-**Пример 1:**\
-![](https://assets.leetcode.com/uploads/2020/11/13/spiral1.jpg)
-```
+Дана матрица `matrix` размером `m x n`. Верните *все элементы* `matrix` *в спиральном порядке*.
+
+## Примеры
+
+**Пример 1:**
+
+![Пример 1](https://assets.leetcode.com/uploads/2020/11/13/spiral1.jpg)
+
+```text
 Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
 Output: [1,2,3,6,9,8,7,4,5]
 ```
 
-**Пример 2:**\
-![](https://assets.leetcode.com/uploads/2020/11/13/spiral.jpg)
-```
+**Пример 2:**
+
+![Пример 2](https://assets.leetcode.com/uploads/2020/11/13/spiral.jpg)
+
+```text
 Input: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
 Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 ```
 
-**Ограничения:**
+## Ограничения
 
-*   `m == matrix.length`
-*   `n == matrix[i].length`
-*   1 ≤ m, n ≤ 10
-*   -100 ≤ `matrix[i][j]` ≤ 100
+- `m == matrix.length`
+- `n == matrix[i].length`
+- `1 ≤ m, n ≤ 10`
+- `-100 ≤ matrix[i][j] ≤ 100`

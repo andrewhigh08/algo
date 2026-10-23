@@ -1,58 +1,58 @@
-## 217. [Содержит дубликат(Contains Duplicate)](https://leetcode.com/problems/contains-duplicate/)
+# 217. Contains Duplicate
 
-**Сложность:** Простая
+**Содержит дубликат** · 🟢 Easy · Arrays & Hashing · [LeetCode](https://leetcode.com/problems/contains-duplicate/description/)
 
----
-
-### Описание задачи:
+## Условие
 
 Дан целочисленный массив `nums`. Верните `true`, если какое-либо значение встречается в массиве **хотя бы два раза**, и `false`, если все элементы массива уникальны.
 
----
+## Примеры
 
-```
-Пример 1:
+**Пример 1:**
+
+```text
 Input: nums = [1,2,3,1]
 Output: true
+Explanation: элемент 1 встречается под индексами 0 и 3.
+```
 
-Объяснение:
-The element 1 occurs at the indices 0 and 3.
+**Пример 2:**
 
-Пример 2:
+```text
 Input: nums = [1,2,3,4]
 Output: false
+Explanation: все элементы различны.
+```
 
-Explanation:
-All elements are distinct.
+**Пример 3:**
 
-Пример 3:
+```text
 Input: nums = [1,1,1,3,3,4,3,2,4,2]
 Output: true
 ```
 
----
+## Ограничения
 
-### Ограничения:
+- `1 ≤ nums.length ≤ 10⁵`
+- `-10⁹ ≤ nums[i] ≤ 10⁹`
 
-*   `1 ≤ nums.length ≤ 10⁵` (Длина массива от 1 до 100,000)
-*   `-10⁹ ≤ nums[i] ≤ 10⁹` (Значение каждого элемента от -1,000,000,000 до 1,000,000,000)
+## Решение
+
+Код — [main.go](main.go). Один проход с хеш-таблицей `seen`: для каждого числа проверяем, встречалось ли оно раньше. Если да — дубликат найден, возвращаем `true`; иначе запоминаем число и идём дальше.
+
+- Время: `O(n)`
+- Память: `O(n)`
 
 ```mermaid
-
 flowchart TD
     Start([Начало: containsDuplicate]) --> Init["Инициализация: seen = map[int]bool"]
-    Init --> LoopStart["Цикл по мапе nums"]
-    LoopStart --> CheckExists{"Проверка: 
-    seen[num] существует?"}
-    CheckExists -->|Да| ReturnTrue["Вернуть true
-    (найден дубликат)"]
-    CheckExists -->|Нет| MarkSeen["seen[num] = true
-    (отметить как увиденное)"]
-    MarkSeen --> LoopContinue{"Конец 
-    цикла?"}
+    Init --> LoopStart["Цикл по массиву nums"]
+    LoopStart --> CheckExists{"Проверка:<br>seen[num] существует?"}
+    CheckExists -->|Да| ReturnTrue["Вернуть true<br>(найден дубликат)"]
+    CheckExists -->|Нет| MarkSeen["seen[num] = true<br>(отметить как увиденное)"]
+    MarkSeen --> LoopContinue{"Конец<br>цикла?"}
     LoopContinue -->|Нет| LoopStart
-    LoopContinue -->|Да| ReturnFalse["Вернуть false
-    (дубликатов нет)"]
+    LoopContinue -->|Да| ReturnFalse["Вернуть false<br>(дубликатов нет)"]
     ReturnTrue --> End([Конец])
     ReturnFalse --> End
 ```

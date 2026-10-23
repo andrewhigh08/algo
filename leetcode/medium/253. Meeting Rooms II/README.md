@@ -1,18 +1,29 @@
-# 919. [Комнаты для Переговоров II (Meeting Rooms II)](https://leetcode.com/problems/meeting-rooms-ii/description/)
+# 253. Meeting Rooms II
 
-`Medium`
+**Комнаты для переговоров II** · 🟡 Medium · Intervals · [LeetCode 🔒](https://leetcode.com/problems/meeting-rooms-ii/description/) · [LintCode 919](https://www.lintcode.com/problem/919/)
 
-**Описание**
+## Условие
 
-Дан массив интервалов времени встреч, состоящий из времени начала и окончания `[[s1,e1],[s2,e2],...]` (`si < ei`). Найдите минимальное количество конференц-залов, необходимое.
+Дан массив интервалов встреч `intervals`, где `intervals[i] = [startᵢ, endᵢ]`. Верните *минимальное количество переговорных комнат*, необходимое для проведения всех встреч.
 
-**Пример**
+## Примеры
 
 **Пример 1:**
-```
-Input: intervals = [(0,30),(5,10),(15,20)]
+
+```text
+Input: intervals = [[0,30],[5,10],[15,20]]
 Output: 2
-Explanation:
-Нам нужно два зала для переговоров
-room1: (0,30)
-room2: (5,10),(15,20)
+Explanation: нужны две комнаты: в первой проходит встреча [0,30], во второй — встречи [5,10] и [15,20].
+```
+
+**Пример 2:**
+
+```text
+Input: intervals = [[7,10],[2,4]]
+Output: 1
+```
+
+## Ограничения
+
+- `1 ≤ intervals.length ≤ 10⁴`
+- `0 ≤ startᵢ < endᵢ ≤ 10⁶`

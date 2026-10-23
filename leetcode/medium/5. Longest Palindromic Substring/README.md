@@ -1,23 +1,29 @@
-# 5. [Самая Длинная Палиндромная Подстрока (Longest Palindromic Substring)](https://leetcode.com/problems/longest-palindromic-substring/description/)
+# 5. Longest Palindromic Substring
 
-`Medium`
+**Самая длинная палиндромная подстрока** · 🟡 Medium · 1-D Dynamic Programming · [LeetCode](https://leetcode.com/problems/longest-palindromic-substring/description/)
 
-Дана строка `s`, верните *самую длинную палиндромную подстроку* в `s`.
+## Условие
+
+Дана строка `s`. Верните *самую длинную палиндромную подстроку* в `s`.
+
+## Примеры
 
 **Пример 1:**
-```
+
+```text
 Input: s = "babad"
 Output: "bab"
 Explanation: "aba" также является допустимым ответом.
 ```
 
 **Пример 2:**
-```
+
+```text
 Input: s = "cbbd"
 Output: "bb"
 ```
 
-**Ограничения:**
+## Ограничения
 
-*   1 ≤ `s.length` ≤ 1000
-*   `s` состоит только из цифр и английских букв.
+- `1 ≤ s.length ≤ 1000`
+- `s` состоит только из цифр и английских букв.

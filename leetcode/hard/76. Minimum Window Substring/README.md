@@ -1,36 +1,47 @@
-# 76. [Минимальная подстрока окна (Minimum Window Substring)](https://leetcode.com/problems/minimum-window-substring/description/)
+# 76. Minimum Window Substring
 
-сложность: `Hard`
+**Минимальная подстрока-окно** · 🔴 Hard · Sliding Window · [LeetCode](https://leetcode.com/problems/minimum-window-substring/description/)
 
-Даны две строки `s` и `t` длины `m` и `n` соответственно. Верните **минимальную подстроку-окно** строки `s` такую, что каждый символ строки `t` (включая дубликаты) содержится в окне. Если такой подстроки нет, верните пустую строку "".
+## Условие
 
-Тестовые примеры будут сгенерированы таким образом, что ответ будет уникальным.
+Даны две строки `s` и `t` длины `m` и `n` соответственно. Верните ***минимальную подстроку-окно*** *строки `s`, такую что каждый символ строки `t` (**включая дубликаты**) содержится в окне*. Если такой подстроки нет, верните *пустую строку* `""`.
 
-```
-Пример 1:
+Тесты составлены так, что ответ **единственный**.
 
+## Примеры
+
+**Пример 1:**
+
+```text
 Input: s = "ADOBECODEBANC", t = "ABC"
 Output: "BANC"
-Explanation: The minimum window substring "BANC" includes 'A', 'B', and 'C' from string t.
+Explanation: минимальная подстрока-окно "BANC" содержит 'A', 'B' и 'C' из строки t.
+```
 
-Пример 2:
+**Пример 2:**
 
+```text
 Input: s = "a", t = "a"
 Output: "a"
-Explanation: The entire string s is the minimum window.
+Explanation: вся строка s и есть минимальное окно.
+```
 
-Пример 3:
+**Пример 3:**
 
+```text
 Input: s = "a", t = "aa"
 Output: ""
-Explanation: Both 'a's from t must be included in the window.
-Since the largest window of s only has one 'a', return empty string.
+Explanation: в окно должны входить обе 'a' из t.
+Самое большое окно в s содержит только одну 'a', поэтому возвращаем пустую строку.
 ```
-**Ограничения:**
 
-*   `m == s.length`
-*   `n == t.length`
-*   `1 ≤ m, n ≤ 10⁵`
-*   `s` и `t` состоят из английских букв в верхнем и нижнем регистре.
+## Ограничения
 
-**Дополнительный вопрос:** Можете ли вы найти алгоритм, работающий за время O(m + n)?
+- `m == s.length`
+- `n == t.length`
+- `1 ≤ m, n ≤ 10⁵`
+- `s` и `t` состоят из заглавных и строчных английских букв.
+
+## Дополнительный вопрос
+
+Можете ли вы найти алгоритм, который работает за время `O(m + n)`?

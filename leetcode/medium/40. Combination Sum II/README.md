@@ -1,15 +1,20 @@
-# 40. [Сумма комбинаций II (Combination Sum II)](https://leetcode.com/problems/combination-sum-ii/description/)
+# 40. Combination Sum II
 
-`Medium`
+**Сумма комбинаций II** · 🟡 Medium · Backtracking · [LeetCode](https://leetcode.com/problems/combination-sum-ii/description/)
 
-Дана коллекция чисел-кандидатов (`candidates`) и целевое число (`target`), найдите все уникальные комбинации в `candidates`, где числа-кандидаты суммируются в `target`.
+## Условие
 
-Каждое число в `candidates` может быть использовано только **один раз** в комбинации.
+Дана коллекция чисел-кандидатов (`candidates`) и целевое число (`target`). Найдите все уникальные комбинации чисел из `candidates`, в которых числа-кандидаты в сумме дают `target`.
 
-**Примечание:** Набор решений не должен содержать дублирующихся комбинаций.
+Каждое число из `candidates` может быть использовано в комбинации только **один раз**.
+
+**Примечание:** набор решений не должен содержать дублирующихся комбинаций.
+
+## Примеры
 
 **Пример 1:**
-```
+
+```text
 Input: candidates = [10,1,2,7,6,1,5], target = 8
 Output:
 [
@@ -21,7 +26,8 @@ Output:
 ```
 
 **Пример 2:**
-```
+
+```text
 Input: candidates = [2,5,2,1,2], target = 5
 Output:
 [
@@ -30,8 +36,8 @@ Output:
 ]
 ```
 
-**Ограничения:**
+## Ограничения
 
-*   1 ≤ `candidates.length` ≤ 100
-*   1 ≤ `candidates[i]` ≤ 50
-*   1 ≤ `target` ≤ 30
+- `1 ≤ candidates.length ≤ 100`
+- `1 ≤ candidates[i] ≤ 50`
+- `1 ≤ target ≤ 30`

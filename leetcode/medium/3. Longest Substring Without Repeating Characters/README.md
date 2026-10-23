@@ -1,28 +1,39 @@
-# 3. [Самая длинная подстрока без повторяющихся символов (Longest Substring Without Repeating Characters)](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)
+# 3. Longest Substring Without Repeating Characters
 
-сложность: `Medium`
+**Самая длинная подстрока без повторяющихся символов** · 🟡 Medium · Sliding Window · [LeetCode](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)
 
-Дана строка `s`, найдите длину самой длинной подстроки без повторяющихся символов.
+## Условие
 
-```
-Пример
+Дана строка `s`. Найдите длину **самой длинной подстроки** без повторяющихся символов.
+
+## Примеры
+
+**Пример 1:**
+
+```text
 Input: s = "abcabcbb"
 Output: 3
-Объяснение: The answer is "abc", with the length of 3.
-
-Пример
-Input: s = "bbbbb"
-Output: 1
-Explanation: The answer is "b", with the length of 1.
-
-Пример
-Input: s = "pwwkew"
-Output: 3
-Объяснение: The answer is "wke", with the length of 3.
-Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+Explanation: ответ — "abc", его длина равна 3. Заметьте, что "bca" и "cab" — тоже правильные ответы.
 ```
 
-**Ограничения:**
+**Пример 2:**
 
-*   `0 ≤ s.length ≤ 5 * 10⁴`
-*   `s` состоит из английских букв, цифр, символов и пробелов.
+```text
+Input: s = "bbbbb"
+Output: 1
+Explanation: ответ — "b", его длина равна 1.
+```
+
+**Пример 3:**
+
+```text
+Input: s = "pwwkew"
+Output: 3
+Explanation: ответ — "wke", его длина равна 3.
+Обратите внимание, что ответ должен быть подстрокой: "pwke" — это подпоследовательность, а не подстрока.
+```
+
+## Ограничения
+
+- `0 ≤ s.length ≤ 10⁵`
+- `s` состоит из английских букв, цифр, символов и пробелов.
