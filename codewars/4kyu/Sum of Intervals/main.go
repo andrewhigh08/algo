@@ -1,4 +1,4 @@
-// https://www.codewars.com/kata/52b7ed099cdc285c300001cd/train/go
+// https://www.codewars.com/kata/52b7ed099cdc285c300001cd
 package main
 
 import (
@@ -11,9 +11,11 @@ const (
 	r = 1
 )
 
-func main() { //       0       1        2       3		   4
-	input := [][2]int{{1, 5}, {10, 20}, {1, 6}, {16, 19}, {5, 11}}
-	SumOfIntervals(input)
+func main() {
+	fmt.Println(SumOfIntervals([][2]int{{1, 2}, {6, 10}, {11, 15}}))                   // 9
+	fmt.Println(SumOfIntervals([][2]int{{1, 4}, {7, 10}, {3, 5}}))                     // 7
+	fmt.Println(SumOfIntervals([][2]int{{1, 5}, {10, 20}, {1, 6}, {16, 19}, {5, 11}})) // 19
+	fmt.Println(SumOfIntervals([][2]int{{0, 20}, {-100000000, 10}, {30, 40}}))         // 100000030
 }
 
 func SumOfIntervals(intervals [][2]int) int {
@@ -26,8 +28,6 @@ func SumOfIntervals(intervals [][2]int) int {
 
 	point := intervals[0][r]
 
-	//fmt.Println(len(intervals))
-
 	for i := 1; i < len(intervals); i++ {
 		if point >= intervals[i][r] {
 			continue
@@ -39,9 +39,6 @@ func SumOfIntervals(intervals [][2]int) int {
 			point = intervals[i][r]
 		}
 	}
-
-	// fmt.Println(intervals)
-	// fmt.Println(length)
 
 	return length
 }

@@ -1,4 +1,4 @@
-// http://codeforces.com/problemset/problem/455/A
+// https://codeforces.com/problemset/problem/455/A
 package main
 
 import (
